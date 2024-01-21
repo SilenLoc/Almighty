@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { invoke } from "@tauri-apps/api/tauri";
 import AButton from "./components/AButton.tsx";
+import { AInput } from "./components/AInput.tsx";
 
 export function Greet() {
   const [greetMsg, setGreetMsg] = useState("");
@@ -13,17 +14,20 @@ export function Greet() {
 
   return (
     <div className="col-second">
-      <p className="text-2x">Welcome to Tauri!</p>
-      <p>Click on the Tauri, Vite, and React logos to learn more.</p>
+      <p className="text-2x text-me-pink">Welcome to Tauri!</p>
+      <p className="text-2x text-me-pink">
+        Click on the Tauri, Vite, and React logos to learn more.
+      </p>
 
-      <input
-        id="greet-input"
-        onChange={(e) => setName(e.currentTarget.value)}
-        placeholder="Enter a name..."
-      />
-
-      <AButton title="Greet" onClick={greet} />
-      <p>{greetMsg}</p>
+      <div className="grid grid-cols-4 gap-x-2">
+        <AInput className="col-start-1 col-end-3" onInput={setName} />
+        <AButton
+          className="col-start-4 col-end-4"
+          title="Greet"
+          onClickA={greet}
+        />
+      </div>
+      <p className="text-me-pink">{greetMsg}</p>
     </div>
   );
 }

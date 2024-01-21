@@ -1,10 +1,11 @@
-import ATabs from "./components/ATabs.tsx";
+import { ATabs } from "./components/ATabs.tsx";
+import { BrowserRouter } from "react-router-dom";
 
 function Over() {
   return (
-    <div className="block">
+    <BrowserRouter>
       <ATabs></ATabs>
-    </div>
+    </BrowserRouter>
   );
 }
 
