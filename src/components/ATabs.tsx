@@ -11,6 +11,7 @@ import { SidebarHeader } from "./SidebarHeader.tsx";
 import { Link, Route, Routes } from "react-router-dom";
 import { Greet } from "../greet.tsx";
 import AButton from "./AButton.tsx";
+import { Secrets } from "../secrets/Secrets.tsx";
 
 const themes = {
   dark: {
@@ -182,7 +183,7 @@ export const ATabs: React.FC = () => {
                 path="values"
                 element={
                   <div>
-                    <p className="text-me-pink">values</p>
+                    <Secrets></Secrets>
                   </div>
                 }
               />
