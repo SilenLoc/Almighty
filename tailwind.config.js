@@ -4,10 +4,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        me: {
-          pink: "#ffb4ad",
-          darkb: "#36311f",
-        },
+        first: "#000000",
+        second: "#b0b0b0",
+        "second-light": "#d6d6d6",
+        third: "#36311f",
       },
     },
   },
