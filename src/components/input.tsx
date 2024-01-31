@@ -41,7 +41,7 @@ export const PInput = forwardRef<
         "after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:ring-inset after:ring-transparent sm:after:focus-within:ring-2 ",
 
         // Disabled state
-        "has-[[data-disabled]]:opacity-50 before:has-[[data-disabled]]:bg-zinc-950/5 before:has-[[data-disabled]]:shadow-none",
+        "has-[[data-disabled]]:opacity-50 before:has-[[data-disabled]]:bg-third/5 before:has-[[data-disabled]]:shadow-none",
 
         // Invalid state
         "before:has-[[data-invalid]]:shadow-red-500/10",
@@ -74,7 +74,7 @@ export const PInput = forwardRef<
           "text-base/6 text-second placeholder:text-first-light sm:text-sm/6",
 
           // Border
-          "border border-zinc-950/10 data-[hover]:border-zinc-950/20 dark:border-white/10 dark:data-[hover]:border-white/20",
+          "border border-third/10 data-[hover]:border-third/20 dark:border-white/10 dark:data-[hover]:border-white/20",
 
           // Background color
           "bg-third",
@@ -86,7 +86,7 @@ export const PInput = forwardRef<
           "data-[invalid]:border-red-500 data-[invalid]:data-[hover]:border-red-500 data-[invalid]:dark:border-red-500 data-[invalid]:data-[hover]:dark:border-red-500",
 
           // Disabled state
-          "data-[disabled]:border-zinc-950/20 dark:data-[hover]:data-[disabled]:border-white/15 data-[disabled]:dark:border-white/15 data-[disabled]:dark:bg-white/[2.5%]",
+          "data-[disabled]:border-third/20 dark:data-[hover]:data-[disabled]:border-white/15 data-[disabled]:dark:border-white/15 data-[disabled]:dark:bg-white/[2.5%]",
         ])}
         {...props}
       />
