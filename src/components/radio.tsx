@@ -70,7 +70,7 @@ const base = [
   "dark:bg-white/5 dark:group-data-[checked]:bg-[--radio-checked-bg]",
 
   // Border
-  "border border-third/15 group-data-[checked]:border-transparent group-data-[checked]:group-data-[hover]:border-transparent group-data-[hover]:border-third/30 group-data-[checked]:bg-[--radio-checked-border]",
+  "border border-neutral/15 group-data-[checked]:border-transparent group-data-[checked]:group-data-[hover]:border-transparent group-data-[hover]:border-neutral/30 group-data-[checked]:bg-[--radio-checked-border]",
   "dark:border-white/15 dark:group-data-[checked]:border-white/5 dark:group-data-[checked]:group-data-[hover]:border-white/5 dark:group-data-[hover]:border-white/30",
 
   // Inner highlight shadow
@@ -78,34 +78,34 @@ const base = [
   "dark:after:-inset-px dark:after:hidden dark:after:rounded-full dark:group-data-[checked]:after:block",
 
   // Indicator color (light mode)
-  "[--radio-indicator:transparent] group-data-[checked]:[--radio-indicator:var(--radio-checked-indicator)] group-data-[checked]:group-data-[hover]:[--radio-indicator:var(--radio-checked-indicator)] group-data-[hover]:[--radio-indicator:theme(colors.third/10%)]",
+  "[--radio-indicator:transparent] group-data-[checked]:[--radio-indicator:var(--radio-checked-indicator)] group-data-[checked]:group-data-[hover]:[--radio-indicator:var(--radio-checked-indicator)] group-data-[hover]:[--radio-indicator:theme(colors.neutral/10%)]",
 
   // Indicator color (dark mode)
-  "dark:group-data-[checked]:group-data-[hover]:[--radio-indicator:var(--radio-checked-indicator)] dark:group-data-[hover]:[--radio-indicator:theme(colors.third)]",
+  "dark:group-data-[checked]:group-data-[hover]:[--radio-indicator:var(--radio-checked-indicator)] dark:group-data-[hover]:[--radio-indicator:theme(colors.neutral)]",
 
   // Focus ring
   "group-data-[focus]:outline group-data-[focus]:outline-2 group-data-[focus]:outline-offset-2 group-data-[focus]:outline-blue-500",
 
   // Disabled state
   "group-data-[disabled]:opacity-50",
-  "group-data-[disabled]:border-third/25 group-data-[disabled]:bg-third/5 group-data-[disabled]:[--radio-checked-indicator:theme(colors.third/50%)] group-data-[disabled]:before:bg-transparent",
+  "group-data-[disabled]:border-neutral/25 group-data-[disabled]:bg-neutral/5 group-data-[disabled]:[--radio-checked-indicator:theme(colors.neutral/50%)] group-data-[disabled]:before:bg-transparent",
   "dark:group-data-[disabled]:border-white/20 dark:group-data-[disabled]:bg-white/[2.5%] dark:group-data-[disabled]:[--radio-checked-indicator:theme(colors.white/50%)] dark:group-data-[disabled]:group-data-[checked]:after:hidden",
 ];
 
 const colors = {
-  "dark/third": [
-    "[--radio-checked-bg:theme(colors.third)] [--radio-checked-border:theme(colors.third/90%)] [--radio-checked-indicator:theme(colors.white)]",
-    "dark:[--radio-checked-bg:theme(colors.third)]",
+  "dark/neutral": [
+    "[--radio-checked-bg:theme(colors.neutral)] [--radio-checked-border:theme(colors.neutral/90%)] [--radio-checked-indicator:theme(colors.white)]",
+    "dark:[--radio-checked-bg:theme(colors.neutral)]",
   ],
   "dark/white": [
-    "[--radio-checked-bg:theme(colors.third)] [--radio-checked-border:theme(colors.third/90%)] [--radio-checked-indicator:theme(colors.white)]",
-    "dark:[--radio-checked-bg:theme(colors.white)] dark:[--radio-checked-border:theme(colors.third/15%)] dark:[--radio-checked-indicator:theme(colors.third)]",
+    "[--radio-checked-bg:theme(colors.neutral)] [--radio-checked-border:theme(colors.neutral/90%)] [--radio-checked-indicator:theme(colors.white)]",
+    "dark:[--radio-checked-bg:theme(colors.white)] dark:[--radio-checked-border:theme(colors.neutral/15%)] dark:[--radio-checked-indicator:theme(colors.neutral)]",
   ],
   white:
-    "[--radio-checked-bg:theme(colors.white)] [--radio-checked-border:theme(colors.third/15%)] [--radio-checked-indicator:theme(colors.third)]",
-  dark: "[--radio-checked-bg:theme(colors.third)] [--radio-checked-border:theme(colors.third/90%)] [--radio-checked-indicator:theme(colors.white)]",
-  third:
-    "[--radio-checked-indicator:theme(colors.white)] [--radio-checked-bg:theme(colors.third)] [--radio-checked-border:theme(colors.third/90%)]",
+    "[--radio-checked-bg:theme(colors.white)] [--radio-checked-border:theme(colors.neutral/15%)] [--radio-checked-indicator:theme(colors.neutral)]",
+  dark: "[--radio-checked-bg:theme(colors.neutral)] [--radio-checked-border:theme(colors.neutral/90%)] [--radio-checked-indicator:theme(colors.white)]",
+  neutral:
+    "[--radio-checked-indicator:theme(colors.white)] [--radio-checked-bg:theme(colors.neutral)] [--radio-checked-border:theme(colors.neutral/90%)]",
   red: "[--radio-checked-indicator:theme(colors.white)] [--radio-checked-bg:theme(colors.red.600)] [--radio-checked-border:theme(colors.red.700/90%)]",
   orange:
     "[--radio-checked-indicator:theme(colors.white)] [--radio-checked-bg:theme(colors.orange.500)] [--radio-checked-border:theme(colors.orange.600/90%)]",
@@ -137,7 +137,7 @@ const colors = {
 type Color = keyof typeof colors;
 
 export function Radio({
-  color = "dark/third",
+  color = "dark/neutral",
   className,
   ...props
 }: { color?: Color; className?: string } & HeadlessRadioProps) {

@@ -19,7 +19,7 @@ export function AccessTokenShower(props: { token: string | undefined }) {
   return (
     <div>
       <div className="gap-4 h-96">
-        <div className="bg-third rounded-md p-1 shadow-second-light">
+        <div className="bg-neutral rounded-md p-1 shadow-second-light">
           <PText className="text-xl mb-2">Payload</PText>
 
           <JsonView
@@ -35,11 +35,11 @@ export function AccessTokenShower(props: { token: string | undefined }) {
           </div>
         </div>
 
-        <div className="bg-third rounded-md p-1 shadow-second-light mt-4">
+        <div className="bg-neutral rounded-md p-1 shadow-second-light mt-4">
           <PText className="text-xl">Raw</PText>
 
           <div className="mt-1">
-            <div className="bg-first w-10/12 h-56">
+            <div className="bg-black w-10/12 h-56">
               <PText className="h-full break-words overflow-y-scroll">
                 {props.token ?? "no token"}
               </PText>

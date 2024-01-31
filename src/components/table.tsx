@@ -67,7 +67,7 @@ export function PTableHead({
 }: React.ComponentPropsWithoutRef<"thead">) {
   return (
     <thead
-      className={clsx(className, "text-third dark:text-third")}
+      className={clsx(className, "text-neutral dark:text-neutral")}
       {...props}
     />
   );
@@ -113,11 +113,11 @@ export function TableRow({
           className,
           href &&
             "has-[[data-row-link][data-focus]]:outline has-[[data-row-link][data-focus]]:outline-2 has-[[data-row-link][data-focus]]:-outline-offset-2 has-[[data-row-link][data-focus]]:outline-blue-500 dark:focus-within:bg-white/[2.5%]",
-          striped && "even:bg-third/[2.5%] dark:even:bg-white/[2.5%]",
-          href && striped && "hover:bg-third/5 dark:hover:bg-white/5",
+          striped && "even:bg-neutral/[2.5%] dark:even:bg-white/[2.5%]",
+          href && striped && "hover:bg-neutral/5 dark:hover:bg-white/5",
           href &&
             !striped &&
-            "hover:bg-third/[2.5%] dark:hover:bg-white/[2.5%]",
+            "hover:bg-neutral/[2.5%] dark:hover:bg-white/[2.5%]",
         )}
       >
         {children}
@@ -137,10 +137,10 @@ export function TableHeader({
       {...props}
       className={clsx(
         className,
-        "border-b border-b-third/10 px-4 py-2 font-medium first:pl-[var(--gutter,theme(spacing.2))] last:pr-[var(--gutter,theme(spacing.2))] dark:border-b-white/10",
+        "border-b border-b-neutral/10 px-4 py-2 font-medium black:pl-[var(--gutter,theme(spacing.2))] last:pr-[var(--gutter,theme(spacing.2))] dark:border-b-white/10",
         grid &&
-          "border-l border-l-third/5 first:border-l-0 dark:border-l-white/5",
-        !bleed && "sm:first:pl-2 sm:last:pr-2",
+          "border-l border-l-neutral/5 black:border-l-0 dark:border-l-white/5",
+        !bleed && "sm:black:pl-2 sm:last:pr-2",
       )}
     />
   );
@@ -161,12 +161,12 @@ export function TableCell({
       {...props}
       className={clsx(
         className,
-        "relative px-4 first:pl-[var(--gutter,theme(spacing.2))] last:pr-[var(--gutter,theme(spacing.2))]",
-        !striped && "border-b border-third/5 dark:border-white/5",
+        "relative px-4 black:pl-[var(--gutter,theme(spacing.2))] last:pr-[var(--gutter,theme(spacing.2))]",
+        !striped && "border-b border-neutral/5 dark:border-white/5",
         grid &&
-          "border-l border-l-third/5 first:border-l-0 dark:border-l-white/5",
+          "border-l border-l-neutral/5 black:border-l-0 dark:border-l-white/5",
         dense ? "py-2.5" : "py-4",
-        !bleed && "sm:first:pl-2 sm:last:pr-2",
+        !bleed && "sm:black:pl-2 sm:last:pr-2",
       )}
     >
       {href && (

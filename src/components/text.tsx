@@ -6,7 +6,7 @@ export function PText({
   ...props
 }: React.ComponentPropsWithoutRef<"p">) {
   return (
-    <p {...props} data-slot="text" className={clsx(className, "text-second")} />
+    <p {...props} data-slot="text" className={clsx(className, "text-white")} />
   );
 }
 
@@ -19,7 +19,7 @@ export function TextLink({
       {...props}
       className={clsx(
         className,
-        "text-second underline decoration-third data-[hover]:decoration-third dark:text-white dark:decoration-white/50 dark:data-[hover]:decoration-white",
+        "text-white underline decoration-neutral data-[hover]:decoration-neutral dark:text-white dark:decoration-white/50 dark:data-[hover]:decoration-white",
       )}
     />
   );
@@ -32,7 +32,7 @@ export function Strong({
   return (
     <strong
       {...props}
-      className={clsx(className, "font-medium text-second dark:text-white")}
+      className={clsx(className, "font-medium text-white dark:text-white")}
     />
   );
 }
@@ -46,7 +46,7 @@ export function Code({
       {...props}
       className={clsx(
         className,
-        "rounded border border-third bg-third/[2.5%] px-0.5 text-sm font-medium text-second sm:text-[0.8125rem] dark:border-white/20 dark:bg-white/5 dark:text-white",
+        "rounded border border-neutral bg-neutral/[2.5%] px-0.5 text-sm font-medium text-second sm:text-[0.8125rem] dark:border-white/20 dark:bg-white/5 dark:text-white",
       )}
     />
   );

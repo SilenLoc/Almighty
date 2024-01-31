@@ -47,7 +47,7 @@ export function Dialog({
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className="fixed inset-0 flex w-screen justify-center overflow-y-auto bg-third/25 px-2 py-2 focus:outline-0 sm:px-6 sm:py-8 lg:px-8 lg:py-16 dark:bg-third/50" />
+          <div className="fixed inset-0 flex w-screen justify-center overflow-y-auto bg-neutral/25 px-2 py-2 focus:outline-0 sm:px-6 sm:py-8 lg:px-8 lg:py-16 dark:bg-neutral/50" />
         </HeadlessTransitionChild>
 
         <HeadlessTransitionChild
@@ -65,7 +65,7 @@ export function Dialog({
               className={clsx(
                 className,
                 sizes[size],
-                "row-start-2 w-full min-w-0 rounded-t-3xl bg-white p-[--gutter] shadow-lg ring-1 ring-third/10 [--gutter:theme(spacing.8)] sm:mb-auto sm:rounded-2xl dark:bg-third dark:ring-white/10 forced-colors:outline",
+                "row-start-2 w-full min-w-0 rounded-t-3xl bg-white p-[--gutter] shadow-lg ring-1 ring-neutral/10 [--gutter:theme(spacing.8)] sm:mb-auto sm:rounded-2xl dark:bg-neutral dark:ring-white/10 forced-colors:outline",
               )}
               enter="ease-out duration-100"
               enterFrom="sm:scale-95"

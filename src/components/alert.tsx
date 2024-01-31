@@ -47,7 +47,7 @@ export function Alert({
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className="fixed inset-0 flex w-screen justify-center overflow-y-auto bg-third px-2 py-2 focus:outline-0 sm:px-6 sm:py-8 lg:px-8 lg:py-16 dark:bg-third/50" />
+          <div className="fixed inset-0 flex w-screen justify-center overflow-y-auto bg-neutral px-2 py-2 focus:outline-0 sm:px-6 sm:py-8 lg:px-8 lg:py-16 dark:bg-neutral/50" />
         </HeadlessTransitionChild>
 
         <HeadlessTransitionChild
@@ -65,7 +65,7 @@ export function Alert({
               className={clsx(
                 className,
                 sizes[size],
-                "row-start-2 w-full rounded-2xl bg-white p-8 shadow-lg ring-1 ring-third sm:rounded-2xl sm:p-6 dark:bg-third dark:ring-white/10 forced-colors:outline",
+                "row-start-2 w-full rounded-2xl bg-white p-8 shadow-lg ring-1 ring-neutral sm:rounded-2xl sm:p-6 dark:bg-neutral dark:ring-white/10 forced-colors:outline",
               )}
               enter="ease-out duration-100"
               enterFrom="scale-95"

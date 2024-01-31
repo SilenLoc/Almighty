@@ -26,8 +26,8 @@ export default function NavBar() {
                     <div
                       className={classNames(
                         isActive
-                          ? "bg-gray-900 text-white"
-                          : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                          ? "bg-dark-accent text-white"
+                          : "text-white hover:bg-white hover:text-black",
                         "rounded-md px-4 py-2 text-lg font-medium",
                       )}
                     >
@@ -37,7 +37,7 @@ export default function NavBar() {
                 </NavLink>
               ))}
             </div>
-            <div className="flex items-center bg-third"></div>
+            <div className="flex items-center bg-neutral"></div>
           </div>
         </div>
       </div>

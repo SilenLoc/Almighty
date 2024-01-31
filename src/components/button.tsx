@@ -59,54 +59,54 @@ const styles = {
   ],
   outline: [
     // Base
-    "border-third/10 text-second data-[active]:bg-third/[2.5%] data-[hover]:bg-third/[2.5%]",
+    "border-neutral/10 text-second data-[active]:bg-neutral/[2.5%] data-[hover]:bg-neutral/[2.5%]",
 
     // Dark mode
     "dark:border-white/15 dark:text-white dark:[--btn-bg:transparent] dark:data-[active]:bg-white/5 dark:data-[hover]:bg-white/5",
 
     // Icon
-    "[--btn-icon:theme(colors.third)] data-[active]:[--btn-icon:theme(colors.third)] data-[hover]:[--btn-icon:theme(colors.third)] dark:data-[active]:[--btn-icon:theme(colors.third)] dark:data-[hover]:[--btn-icon:theme(colors.third)]",
+    "[--btn-icon:theme(colors.neutral)] data-[active]:[--btn-icon:theme(colors.neutral)] data-[hover]:[--btn-icon:theme(colors.neutral)] dark:data-[active]:[--btn-icon:theme(colors.neutral)] dark:data-[hover]:[--btn-icon:theme(colors.neutral)]",
   ],
   plain: [
     // Base
-    "border-transparent text-second data-[active]:bg-third/5 data-[hover]:bg-third/5",
+    "border-transparent text-second data-[active]:bg-neutral/5 data-[hover]:bg-neutral/5",
 
     // Dark mode
     "dark:text-white dark:data-[active]:bg-white/10 dark:data-[hover]:bg-white/10",
 
     // Icon
-    "[--btn-icon:theme(colors.third)] data-[active]:[--btn-icon:theme(colors.third)] data-[hover]:[--btn-icon:theme(colors.third)] dark:[--btn-icon:theme(colors.third)] dark:data-[active]:[--btn-icon:theme(colors.third)] dark:data-[hover]:[--btn-icon:theme(colors.third)]",
+    "[--btn-icon:theme(colors.neutral)] data-[active]:[--btn-icon:theme(colors.neutral)] data-[hover]:[--btn-icon:theme(colors.neutral)] dark:[--btn-icon:theme(colors.neutral)] dark:data-[active]:[--btn-icon:theme(colors.neutral)] dark:data-[hover]:[--btn-icon:theme(colors.neutral)]",
   ],
   colors: {
-    "dark/third": [
-      "text-white [--btn-bg:theme(colors.third)] [--btn-border:theme(colors.third/90%)] [--btn-hover-overlay:theme(colors.white/10%)]",
-      "dark:text-white dark:[--btn-bg:theme(colors.third)] dark:[--btn-hover-overlay:theme(colors.white/5%)]",
-      "[--btn-icon:theme(colors.third)] data-[active]:[--btn-icon:theme(colors.third)] data-[hover]:[--btn-icon:theme(colors.third)]",
+    "dark/neutral": [
+      "text-white [--btn-bg:theme(colors.neutral)] [--btn-border:theme(colors.neutral/90%)] [--btn-hover-overlay:theme(colors.white/10%)]",
+      "dark:text-white dark:[--btn-bg:theme(colors.neutral)] dark:[--btn-hover-overlay:theme(colors.white/5%)]",
+      "[--btn-icon:theme(colors.neutral)] data-[active]:[--btn-icon:theme(colors.neutral)] data-[hover]:[--btn-icon:theme(colors.neutral)]",
     ],
     light: [
-      "text-second [--btn-bg:white] [--btn-border:theme(colors.third/10%)] [--btn-hover-overlay:theme(colors.third/2.5%)] data-[active]:[--btn-border:theme(colors.third/15%)] data-[hover]:[--btn-border:theme(colors.third/15%)]",
-      "dark:text-white dark:[--btn-hover-overlay:theme(colors.white/5%)] dark:[--btn-bg:theme(colors.third)]",
-      "[--btn-icon:theme(colors.third)] data-[active]:[--btn-icon:theme(colors.third)] data-[hover]:[--btn-icon:theme(colors.third)] dark:[--btn-icon:theme(colors.third)] dark:data-[active]:[--btn-icon:theme(colors.third)] dark:data-[hover]:[--btn-icon:theme(colors.third)]",
+      "text-second [--btn-bg:white] [--btn-border:theme(colors.neutral/10%)] [--btn-hover-overlay:theme(colors.neutral/2.5%)] data-[active]:[--btn-border:theme(colors.neutral/15%)] data-[hover]:[--btn-border:theme(colors.neutral/15%)]",
+      "dark:text-white dark:[--btn-hover-overlay:theme(colors.white/5%)] dark:[--btn-bg:theme(colors.neutral)]",
+      "[--btn-icon:theme(colors.neutral)] data-[active]:[--btn-icon:theme(colors.neutral)] data-[hover]:[--btn-icon:theme(colors.neutral)] dark:[--btn-icon:theme(colors.neutral)] dark:data-[active]:[--btn-icon:theme(colors.neutral)] dark:data-[hover]:[--btn-icon:theme(colors.neutral)]",
     ],
     "dark/white": [
-      "text-white [--btn-bg:theme(colors.third)] [--btn-border:theme(colors.third/90%)] [--btn-hover-overlay:theme(colors.white/10%)]",
-      "dark:text-second dark:[--btn-bg:white] dark:[--btn-hover-overlay:theme(colors.third/5%)]",
-      "[--btn-icon:theme(colors.third)] data-[active]:[--btn-icon:theme(colors.third)] data-[hover]:[--btn-icon:theme(colors.third)] dark:[--btn-icon:theme(colors.third)] dark:data-[active]:[--btn-icon:theme(colors.third)] dark:data-[hover]:[--btn-icon:theme(colors.third)]",
+      "text-white [--btn-bg:theme(colors.neutral)] [--btn-border:theme(colors.neutral/90%)] [--btn-hover-overlay:theme(colors.white/10%)]",
+      "dark:text-second dark:[--btn-bg:white] dark:[--btn-hover-overlay:theme(colors.neutral/5%)]",
+      "[--btn-icon:theme(colors.neutral)] data-[active]:[--btn-icon:theme(colors.neutral)] data-[hover]:[--btn-icon:theme(colors.neutral)] dark:[--btn-icon:theme(colors.neutral)] dark:data-[active]:[--btn-icon:theme(colors.neutral)] dark:data-[hover]:[--btn-icon:theme(colors.neutral)]",
     ],
     dark: [
-      "text-white [--btn-bg:theme(colors.third)] [--btn-border:theme(colors.third/90%)] [--btn-hover-overlay:theme(colors.white/10%)]",
-      "dark:[--btn-hover-overlay:theme(colors.white/5%)] dark:[--btn-bg:theme(colors.third)]",
-      "[--btn-icon:theme(colors.third)] data-[active]:[--btn-icon:theme(colors.third)] data-[hover]:[--btn-icon:theme(colors.third)]",
+      "text-white [--btn-bg:theme(colors.neutral)] [--btn-border:theme(colors.neutral/90%)] [--btn-hover-overlay:theme(colors.white/10%)]",
+      "dark:[--btn-hover-overlay:theme(colors.white/5%)] dark:[--btn-bg:theme(colors.neutral)]",
+      "[--btn-icon:theme(colors.neutral)] data-[active]:[--btn-icon:theme(colors.neutral)] data-[hover]:[--btn-icon:theme(colors.neutral)]",
     ],
     white: [
-      "text-second [--btn-bg:white] [--btn-border:theme(colors.third/10%)] [--btn-hover-overlay:theme(colors.third/2.5%)] data-[active]:[--btn-border:theme(colors.third/15%)] data-[hover]:[--btn-border:theme(colors.third/15%)]",
-      "dark:[--btn-hover-overlay:theme(colors.third/5%)]",
-      "[--btn-icon:theme(colors.third)] data-[active]:[--btn-icon:theme(colors.third)] data-[hover]:[--btn-icon:theme(colors.third)]",
+      "text-second [--btn-bg:white] [--btn-border:theme(colors.neutral/10%)] [--btn-hover-overlay:theme(colors.neutral/2.5%)] data-[active]:[--btn-border:theme(colors.neutral/15%)] data-[hover]:[--btn-border:theme(colors.neutral/15%)]",
+      "dark:[--btn-hover-overlay:theme(colors.neutral/5%)]",
+      "[--btn-icon:theme(colors.neutral)] data-[active]:[--btn-icon:theme(colors.neutral)] data-[hover]:[--btn-icon:theme(colors.neutral)]",
     ],
-    third: [
-      "text-white [--btn-hover-overlay:theme(colors.white/10%)] [--btn-bg:theme(colors.third)] [--btn-border:theme(colors.third/90%)]",
+    neutral: [
+      "text-white [--btn-hover-overlay:theme(colors.white/10%)] [--btn-bg:theme(colors.neutral)] [--btn-border:theme(colors.neutral/90%)]",
       "dark:[--btn-hover-overlay:theme(colors.white/5%)]",
-      "[--btn-icon:theme(colors.third)] data-[active]:[--btn-icon:theme(colors.third)] data-[hover]:[--btn-icon:theme(colors.third)]",
+      "[--btn-icon:theme(colors.neutral)] data-[active]:[--btn-icon:theme(colors.neutral)] data-[hover]:[--btn-icon:theme(colors.neutral)]",
     ],
     indigo: [
       "text-white [--btn-hover-overlay:theme(colors.white/10%)] [--btn-bg:theme(colors.indigo.500)] [--btn-border:theme(colors.indigo.600/90%)]",
@@ -199,7 +199,7 @@ export const PButton = React.forwardRef(function Button(
       ? styles.outline
       : plain
         ? styles.plain
-        : clsx(styles.solid, styles.colors[color ?? "dark/third"]),
+        : clsx(styles.solid, styles.colors[color ?? "dark/neutral"]),
   );
 
   return "href" in props ? (

@@ -56,25 +56,25 @@ export function SwitchField({ className, ...props }: HeadlessFieldProps) {
 }
 
 const colors = {
-  "dark/third": [
-    "[--switch-bg-ring:theme(colors.third/90%)] [--switch-bg:theme(colors.third)] dark:[--switch-bg-ring:transparent] dark:[--switch-bg:theme(colors.white/25%)]",
-    "[--switch-ring:theme(colors.third/90%)] [--switch-shadow:theme(colors.black/10%)] [--switch:white] dark:[--switch-ring:theme(colors.third/90%)]",
+  "dark/neutral": [
+    "[--switch-bg-ring:theme(colors.neutral/90%)] [--switch-bg:theme(colors.neutral)] dark:[--switch-bg-ring:transparent] dark:[--switch-bg:theme(colors.white/25%)]",
+    "[--switch-ring:theme(colors.neutral/90%)] [--switch-shadow:theme(colors.black/10%)] [--switch:white] dark:[--switch-ring:theme(colors.neutral/90%)]",
   ],
   "dark/white": [
-    "[--switch-bg-ring:theme(colors.third/90%)] [--switch-bg:theme(colors.third)] dark:[--switch-bg-ring:transparent] dark:[--switch-bg:theme(colors.white)]",
-    "[--switch-ring:theme(colors.third/90%)] [--switch-shadow:theme(colors.black/10%)] [--switch:white] dark:[--switch-ring:transparent] dark:[--switch:theme(colors.third)]",
+    "[--switch-bg-ring:theme(colors.neutral/90%)] [--switch-bg:theme(colors.neutral)] dark:[--switch-bg-ring:transparent] dark:[--switch-bg:theme(colors.white)]",
+    "[--switch-ring:theme(colors.neutral/90%)] [--switch-shadow:theme(colors.black/10%)] [--switch:white] dark:[--switch-ring:transparent] dark:[--switch:theme(colors.neutral)]",
   ],
   dark: [
-    "[--switch-bg-ring:theme(colors.third/90%)] [--switch-bg:theme(colors.third)] dark:[--switch-bg-ring:theme(colors.white/15%)]",
-    "[--switch-ring:theme(colors.third/90%)] [--switch-shadow:theme(colors.black/10%)] [--switch:white]",
+    "[--switch-bg-ring:theme(colors.neutral/90%)] [--switch-bg:theme(colors.neutral)] dark:[--switch-bg-ring:theme(colors.white/15%)]",
+    "[--switch-ring:theme(colors.neutral/90%)] [--switch-shadow:theme(colors.black/10%)] [--switch:white]",
   ],
-  third: [
-    "[--switch-bg-ring:theme(colors.third/90%)] [--switch-bg:theme(colors.third)] dark:[--switch-bg-ring:transparent]",
-    "[--switch-shadow:theme(colors.black/10%)] [--switch:white] [--switch-ring:theme(colors.third/90%)]",
+  neutral: [
+    "[--switch-bg-ring:theme(colors.neutral/90%)] [--switch-bg:theme(colors.neutral)] dark:[--switch-bg-ring:transparent]",
+    "[--switch-shadow:theme(colors.black/10%)] [--switch:white] [--switch-ring:theme(colors.neutral/90%)]",
   ],
   white: [
     "[--switch-bg-ring:theme(colors.black/15%)] [--switch-bg:white] dark:[--switch-bg-ring:transparent]",
-    "[--switch-shadow:theme(colors.black/10%)] [--switch-ring:transparent] [--switch:theme(colors.third)]",
+    "[--switch-shadow:theme(colors.black/10%)] [--switch-ring:transparent] [--switch:theme(colors.neutral)]",
   ],
   red: [
     "[--switch-bg-ring:theme(colors.red.700/90%)] [--switch-bg:theme(colors.red.600)] dark:[--switch-bg-ring:transparent]",
@@ -149,7 +149,7 @@ const colors = {
 type Color = keyof typeof colors;
 
 export function Switch({
-  color = "dark/third",
+  color = "dark/neutral",
   className,
   children,
   ...props
@@ -174,7 +174,7 @@ export function Switch({
         "forced-colors:outline forced-colors:[--switch-bg:Highlight] dark:forced-colors:[--switch-bg:Highlight]",
 
         // Unchecked
-        "bg-third ring-1 ring-inset ring-black/5 dark:bg-white/5 dark:ring-white/15",
+        "bg-neutral ring-1 ring-inset ring-black/5 dark:bg-white/5 dark:ring-white/15",
 
         // Checked
         "data-[checked]:bg-[--switch-bg] data-[checked]:ring-[--switch-bg-ring] dark:data-[checked]:bg-[--switch-bg] dark:data-[checked]:ring-[--switch-bg-ring]",
@@ -187,7 +187,7 @@ export function Switch({
         "dark:data-[hover]:data-[checked]:ring-[--switch-bg-ring] dark:data-[hover]:ring-white/25",
 
         // Disabled
-        "data-[disabled]:bg-third data-[disabled]:data-[checked]:bg-third data-[disabled]:opacity-50 data-[disabled]:data-[checked]:ring-black/5",
+        "data-[disabled]:bg-neutral data-[disabled]:data-[checked]:bg-neutral data-[disabled]:opacity-50 data-[disabled]:data-[checked]:ring-black/5",
         "dark:data-[disabled]:bg-white/15 dark:data-[disabled]:data-[checked]:bg-white/15 dark:data-[disabled]:data-[checked]:ring-white/15",
 
         // Color specific styles
