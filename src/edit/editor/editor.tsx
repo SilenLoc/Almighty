@@ -1,4 +1,4 @@
-import CodeMirror from "@uiw/react-codemirror";
+import CodeMirror, { ViewUpdate } from "@uiw/react-codemirror";
 import { aura } from "@uiw/codemirror-theme-aura";
 import { historyField } from "@codemirror/commands";
 import { useEffect, useState } from "react";
@@ -6,10 +6,6 @@ import { invoke } from "@tauri-apps/api/tauri";
 import { PText } from "../../components/text";
 
 const stateFields = { history: historyField };
-
-interface Doc {
-  doc: string;
-}
 
 interface Result {
   result: string;
@@ -30,16 +26,41 @@ function Editor() {
   const serializedState = localStorage.getItem("editorstate");
   const value = localStorage.getItem("editorval") || "";
 
-  const [valueToCheck, setValueToCheck] = useState<Doc>();
+  const [view, setView] = useState<ViewUpdate>();
+  const [val, setVal] = useState<string>();
   const [error, setError] = useState<ParseError>();
 
+  const [runInterval, setRunInterval] = useState<boolean>(true);
+
   useEffect(() => {
-    const input = valueToCheck?.doc;
+    const interval = setInterval(() => {
+      setRunInterval(true);
+    }, 200);
+    if (runInterval) {
+      check(val);
+      save();
+    }
+    return () => clearInterval(interval);
+  }, [runInterval]);
+
+  function check(toCheck: string | undefined) {
+    const input = toCheck;
     invoke("parse", { input }).then((res) => {
       const pretty: Result = JSON.parse(res as string);
       setError(pretty.error);
     });
-  }, [valueToCheck]);
+  }
+
+  function save() {
+    if (val) {
+      localStorage.setItem("editorval", val);
+    }
+    if (view) {
+      const state = view?.state.toJSON(stateFields);
+      localStorage.setItem("editorstate", JSON.stringify(state));
+    }
+    console.log("saving editor state");
+  }
 
   return (
     <div>
@@ -58,11 +79,9 @@ function Editor() {
             : undefined
         }
         onChange={(value, viewUpdate) => {
-          localStorage.setItem("editorval", value);
-
-          const state = viewUpdate.state.toJSON(stateFields);
-          localStorage.setItem("editorstate", JSON.stringify(state));
-          setValueToCheck(state);
+          setVal(value);
+          setView(viewUpdate);
+          setRunInterval(false);
         }}
       />
       ;
